@@ -1,0 +1,30 @@
+<h3>Crear cliente</h3>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Nombres</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="customer.name" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Apellidos</label>
+            <input type="text" class="form-control" id="surname" required [(ngModel)]="customer.surname" name="surname">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Edad</label>
+            <input type="text" class="form-control" id="age" required [(ngModel)]="customer.age" name="age">
+        </div>
+
+        <div class="form-group">
+          <label for="name">Fecha nacimiento</label>
+          <input type="text" class="form-control" id="birthDate" required [(ngModel)]="customer.birthDate" name="birthDate">
+        </div>
+
+        <button type="submit" class="btn btn-success">Registrar</button>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+    <h4>Registro exitoso!</h4>
+</div>
